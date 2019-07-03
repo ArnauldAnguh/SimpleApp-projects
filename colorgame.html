@@ -1,0 +1,81 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+      <title>COLOR GAME</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <style type="text/css">
+        body {
+            margin:  0px;
+            padding: 0px;
+            background: #000;
+            font-family: Avenir;
+          }
+          h1{
+            color: white;
+            text-align: center;
+            margin: 0px; 
+            line-height: 1.1;
+            padding: 20px 0;
+            box-sizing: border-box;
+            font-weight: normal;
+            background: steelblue;
+            text-transform: uppercase;
+          }
+          .container {
+            margin: 20px auto;
+            max-width: 600px;
+            box-sizing: border-box;
+          }
+          #color{font-size: 200%}
+          .square {
+            width: 30%;
+            padding-bottom: 30%;
+            margin: 1.66%;
+            float: left;
+            border-radius: 20px;
+            transition: background .6s;
+            background: lightgreen
+          }
+          .circle{
+            border-radius: 50%
+          }
+          .triangle {border-radius: 34%}
+          span#message{
+            font-weight: 700;
+            display: inline-block;
+            width: 20%;
+          }
+          .nav {width: 100%;height: 30px; text-align: center;margin: 0px; background: white;padding: 0px;box-sizing: border-box;}
+          
+          button {
+            height: 30px;
+            height: 100%;
+            border: none;cursor: pointer;outline: 0px;background: none;font-weight: 700;color: steelblue;text-transform: uppercase;letter-spacing: 1px;font-size: inherit;
+            transition: all .3s;
+          }
+          button:hover {color: white; background: steelblue}
+          .selected{background: steelblue;color: white}
+      </style>
+    </head>
+    <body style="background: #2d2d2d">
+      <h1>The Great <br><span id="color">RGB</span> <br>Color Game</h1>
+      <div>
+        <div class="nav">
+          <button id="reset">New Colors</button>
+          <span id="message"></span>
+          <button id = "easybtn">Easy</button>
+          <button id="hardbtn" class = "selected">Hard</button>
+        </div>
+      </div>
+      <div class="container">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+      </div>
+     
+      <script type="text/javascript" src="js/colors.js"></script>
+    </body>
+  </html>

@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Score Keeper Game </title>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <style type="text/css">
+      .body {
+        background-image: url('img/cel.png');
+        transition : all 1.5s ease-in-out;
+        }
+        .winner {
+          color: green;
+        }
+        .done{
+          text-decoration: line-through;
+          opacity: .8;
+        }
+      </style>
+    </head>
+
+    <body>
+    
+    	<div class="container">	
+    	  <h1 class="header">Learning JavaScript Like Fruits!</h1>
+			<a href="index.php#section1"  title="hreff tag">
+				<h2 id="msg" class="well">
+				Section 1  
+			   </h2>
+			</a>
+       <br> <button class="btn btn-primary">Hover Me</button><br><br>
+       <!-- game? -->
+       <h1><span id="span1">0</span> to <span id="span2">0</span></h1>
+       <br><br>
+       <p>playing to : <span id="limit">5</span></p><br>
+       <input type="number" name="">
+       <button class="btn" id="p1">Player One</button>
+       <button class="btn" id="p2">Player Two</button>
+       <button class="btn" id="reset">Reset</button>
+
+      <ul class="ul-list" style=" padding: 10px;">
+        <li class="btn">Arnauld</li>
+        <li class="btn">professore</li>
+        <li class="btn">dalton</li>
+      </ul>
+		</div>
+
+      <script type="text/javascript" src="js/scoreKeeper.js"></script>
+    </body>
+  </html>
