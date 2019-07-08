@@ -3,6 +3,12 @@ $("ul").on("click", "li", function() { //listen to the lis once they are clicked
 	$(this).toggleClass("completed")
 })
 
+//Clear All Todos
+$('.clear').click(function(){
+	$('li').fadeOut(450, function() {
+		$(this).remove()
+	})
+})
 // Click On X to delete Todo  //note: once the click event listener on the span is triggered,
  // the event listener is boobled up to parent listeners. so we pass an e(or event) argument to the anonymous function
  // and use it to stop the parent event listeners from triggering 

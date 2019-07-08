@@ -10,7 +10,8 @@ h1{
 	margin: 0;
 	padding: 10px 20px;
 }
-.fa-plus {float: right;cursor: pointer}
+.fa-plus {float: right;cursor: pointer;margin: 5px;}
+/*.clear{float: right;text-decoration: none; font-style: italic;color: red;}*/
 ul{
 	list-style-type: none;
 	margin: 0;

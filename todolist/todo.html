@@ -4,10 +4,15 @@
 	<title>TODO LIST APP</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/todos.css">
 	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+	<style type="text/css">
+	.clear{float: right;text-decoration: none; font-style: italic;color: #e74c3c;margin:0px 5px;cursor: pointer;}
+	.fa-plus {float: right;cursor: pointer;margin: 5px;}
+
+</style>
 </head>
 <body>
 <div id="container">
-	<h1>TO-DO List <i class="fa fa-plus" title="click to hide text input"></i></h1> 
+	<h1>TO-DO List <i class="fa fa-plus" title="click to hide text input"></i><b class="clear" title="Clear Todos">Clear</b></h1> 
 	<input type="text" placeholder="Add New To-do " id="input" name="">
 	<ul>
 		<li><span><i class="fa fa-trash"></i></span>	Visit Ubuea Tomorrow</li>
@@ -23,5 +28,12 @@
 
 <script type="text/javascript" src="assets/js/jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="assets/js/todos.js"></script>
+<script type="text/javascript">
+	$('.clear').click(function(){
+		$('li').fadeOut(450, function() {
+			$(this).remove()
+		})
+})
+</script>
 </body>
 </html>
