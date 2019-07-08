@@ -88,6 +88,16 @@ img {
   background: rgba(0, 0, 0, 0.1);
 }
 
+.notification {
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  background:  #fff1f2;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.notification span {
+  font-weight: bold;
+}
 .container td input {
   cursor: pointer;
   background: lightblue;

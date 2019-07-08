@@ -53,7 +53,7 @@ if (isset($_POST['register'])) {
 	 		$_SESSION['email']     = $email;
 	 		$_SESSION['status']     = $status;
 
-	 		$_SESSION['success3'] = "<br>Note: Books Borrowed here MUST be returned within 7days!!";
+	 		$_SESSION['success3'] = "<br><b>Note:</b> Books Borrowed here MUST be returned within 7days!!";
 
 	 		header('location: library.php');
 	 		exit();

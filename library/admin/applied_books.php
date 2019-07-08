@@ -17,7 +17,6 @@ if ($results_approve) {
 
 	$borrower_name = mysqli_fetch_assoc($run_query);
 
-// $_SESSION['borrower'] = $borrower_name['username'];
 	$_SESSION['success']  = "<div class='clover'><p>Approved</p></div>";
 
 
@@ -38,19 +37,19 @@ if ($_SESSION['success']) {
 }
 
 
-//UNAPPROVING REQUESTED BOOK
-
+//DISAPPROVING REQUESTED BOOK
 if (isset($_GET['unapprove'])) {
-	 $unapprove_id  = $_GET['unapprove'];
-
-        $query    = "DELETE FROM admin_approvals WHERE id = $unapprove_id ";
-       $results  = mysqli_query($db,$query);
-
-       if ($results) {
-         header('location: applied_books.php');
-	      exit();
+	$unapprove_id  = $_GET['unapprove'];
+    $query    = "DELETE FROM admin_approvals WHERE id = $unapprove_id ";
+    $results  = mysqli_query($db,$query);
+    if ($results) {
+		$query = mysqli_query($db, "SELECT * FROM books WHERE id = $unapprove_id ");
+		$key = mysqli_fetch_assoc($query);
+		$_SESSION['bk_unapproved'] = 
+		" The requested book <b>" . $key['title'] . "</b> By <b>" . $key['author'] . "</b> was Disapproved by Liberian!";
+        header('location: applied_books.php');
+	    exit();
         }
-
 	 }
  ?>
 <!DOCTYPE html>

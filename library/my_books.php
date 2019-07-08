@@ -12,6 +12,24 @@
 <head>
 	<title>My Books</title>
 	<link rel="stylesheet" type="text/css" href="css/mybks.css">
+	<style>
+.notification {
+		color: white;
+		padding: 5px 10px;
+		text-align: center;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		}
+.notification span {
+		font-weight: bold;
+		color: red;
+		}
+.notification b {
+		font-weight: bold;
+		color: orangered;
+		background: transparent;
+		}
+
+</style>
 </head>
 <body>
 		<header>
@@ -32,8 +50,8 @@
 	<div class="container">
 		<h2>MY PACKAGES FROM ULIBRARY</h2>
 		<form method="POST" action="" enctype="multipart/form-data">
-			<table border="true">
-				<thead>
+			<table >
+				<thead >
 					<tr>
 						<th>N<sup>o</sup></th>
 						<th>Book</th>
@@ -53,6 +71,11 @@
 				  	$run_query = mysqli_query($db,$query);
 
 			  	if ($run_query) {
+					if(!empty($_SESSION['bk_unapproved'])) {
+						  echo "<div class='notification' style='color:#666'>
+						  <span>*Notification:</span> " . $_SESSION['bk_unapproved'] . " </div>";
+						  unset($_SESSION['bk_unapproved']);
+					  }
 			  	   if (mysqli_num_rows($run_query) >= 1) { 
 			  	   $rows = mysqli_fetch_all($run_query, MYSQLI_ASSOC);
 			  	   
@@ -81,7 +104,6 @@
 					exit(0);
 				 }
                ?>
-
 			</tbody>
 		</table>
 	</form>
